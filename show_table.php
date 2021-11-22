@@ -26,23 +26,17 @@ $mysqli->close();
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<style>
 		body{ font: 14px sans-serif; text-align: center; }
-
 				table {
 			margin: 0 auto;
 			font-size: large;
 			border: 1px solid black;
 		}
-  
 		h1 {
 			text-align: center;
-			color: #006600;
 			font-size: xx-large;
-			font-family: 'Gill Sans', 'Gill Sans MT', 
-			' Calibri', 'Trebuchet MS', 'sans-serif';
 		}
   
 		td {
-			background-color: #E4F5D4;
 			border: 1px solid black;
 		}
   
