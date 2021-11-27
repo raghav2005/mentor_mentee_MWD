@@ -55,7 +55,7 @@ $mysqli->close();
 </head>
 <body>
   	<section>
-		<table>
+		<table id="example" class="display">
 			<tr>
 				<th>pairingID</th>
 				<th>mentorFullName</th>
