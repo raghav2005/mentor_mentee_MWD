@@ -17,6 +17,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<style>
 		body{ font: 14px sans-serif; text-align: center; }
+		.btn_showtable {
+			background-color: #4CAF50;
+		}
 	</style>
 </head>
 <body>
@@ -26,7 +29,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		<a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
 	</p>
 	<p>
-		<a href="show_table.php" class="btn btn-warning">Show all</a>
+		<a href="show_table.php" class="btn btn_showtable">Show Table</a>
 	</p>
 </body>
 </html>
