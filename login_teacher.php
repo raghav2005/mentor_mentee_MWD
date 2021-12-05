@@ -3,8 +3,8 @@
 session_start();
  
 // Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin_student"]) && $_SESSION["loggedin_student"] === true){
-    header("location: welcome_student.php");
+if(isset($_SESSION["loggedin_teacher"]) && $_SESSION["loggedin_teacher"] === true){
+    header("location: welcome_teacher.php");
     exit;
 }
  
@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT studentID, studentUsername, studentPassword FROM student WHERE studentUsername LIKE ?";
+        $sql = "SELECT teacherID, teacherUsername, teacherPassword FROM teacher WHERE teacherUsername LIKE ?";
         
         if($stmt = $mysqli->prepare($sql)){
             // Bind variables to the prepared statement as parameters
@@ -59,12 +59,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             session_start();
                             
                             // Store data in session variables
-                            $_SESSION["loggedin_student"] = true;
+                            $_SESSION["loggedin_teacher"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;                            
                             
                             // Redirect user to welcome page
-                            header("location: welcome_student.php");
+                            header("location: welcome_teacher.php");
                         } else{
                             // Password is not valid, display a generic error message
                             $login_err = "Invalid username or password.";
@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <div class="wrapper">
-        <h2>Student Login</h2>
+        <h2>Teacher Login</h2>
         <p>Please fill in your credentials to login.</p>
 
         <?php 

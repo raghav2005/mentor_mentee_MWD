@@ -3,7 +3,7 @@
 session_start();
  
 // Check if the user is logged in, otherwise redirect to login page
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+if(!isset($_SESSION["loggedin_student"]) || $_SESSION["loggedin_student"] !== true){
     header("location: login_student.php");
     exit;
 }
@@ -98,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
-                <a class="btn btn-link ml-2" href="welcome.php">Cancel</a>
+                <a class="btn btn-link ml-2" href="welcome_student.php">Cancel</a>
             </div>
         </form>
     </div>    
