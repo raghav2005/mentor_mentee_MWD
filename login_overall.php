@@ -32,6 +32,7 @@ require_once "config.php";
 			$("#student_div").load("login_student.php"); 
 		});
     </script> 
+    <base target="_parent">
 </head>
 <body>
     <div class="wrapper">

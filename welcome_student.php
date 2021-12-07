@@ -21,6 +21,7 @@ if(!isset($_SESSION["loggedin_student"]) || $_SESSION["loggedin_student"] !== tr
 			background-color: #4CAF50;
 		}
 	</style>
+	<base target="_parent">
 </head>
 <body>
 	<h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>

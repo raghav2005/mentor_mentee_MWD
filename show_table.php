@@ -53,6 +53,7 @@ $mysqli->close();
 			font-weight: lighter;
 		}
 	</style>
+	<base target="_parent">
 </head>
 <body>
   	<section>
@@ -145,7 +146,7 @@ $mysqli->close();
 			}
 		}
 		}
-</script>
+	</script>
 
-</body>
+	</body>
 </html>
