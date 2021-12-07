@@ -100,7 +100,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	</style>
 </head>
 <base target="_parent">
-<body>
+<body style="background: rgba(128, 0, 0, 0.3);">
 	<div class="wrapper">
 		<h2>Teacher Login</h2>
 		<p>Please fill in your credentials to login.</p>
