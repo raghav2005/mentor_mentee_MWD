@@ -7,7 +7,7 @@ if(isset($_SESSION["loggedin_student"]) && $_SESSION["loggedin_student"] === tru
 	header("location: welcome_student.php");
 	exit;
 }
- 
+
 // Include config file
 require_once "config.php";
  
@@ -125,7 +125,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			<div class="form-group">
 				<input type="submit" class="btn btn-primary" value="Login">
 			</div>
-			<p>Don't have an account? <a href="register_student.php">Sign up now</a>.</p>
+			<p>Don't have an account? <a href="register_overall.php">Sign up now</a>.</p>
 		</form>
 	</div>
 </body>

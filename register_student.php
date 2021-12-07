@@ -127,7 +127,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	</style>
 	<base target="_parent">
 </head>
-<body>
+<body style="background: rgba(0, 128, 0, 0.3);">
 	<div class="wrapper">
 		<h2>Sign Up</h2>
 		<p>Please fill this form to create an account.</p>
@@ -161,7 +161,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				<input type="submit" class="btn btn-primary" value="Submit">
 				<input type="reset" class="btn btn-secondary ml-2" value="Reset">
 			</div>
-			<p>Already have an account? <a href="login_student.php">Login here</a>.</p>
+			<p>Already have an account? <a href="login_overall.php">Login here</a>.</p>
 		</form>
 	</div>
 </body>
