@@ -33,20 +33,34 @@ require_once "config.php";
 			.wrapper{ width: 360px; padding: 20px; }
 		</style>
 
-		<script>
-			$(function(){
-				$("#student_div").load("login_student.php"); 
-			});
-		</script> 
-
 		<base target="_parent">
 
 	</head>
 
 	<body>
-		<!-- REPLACE WITH NAVBAR -->
-		<div class="mt-4 p-5 bg-primary text-white rounded">
-			<h1>LOGIN PAGE</h1>
+		<div class="row" style="height:100px;">
+			<div class="col-md-12">
+				<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+					<div class="container-fluid">
+						<a class="navbar-brand" href="#">Mentor-Mentee System</a>
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link active" href="#">Login</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="register_overall.php">Register</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="#">Show Table</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="#">Create Links</a>
+							</li>
+						</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-4"></div>

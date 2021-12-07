@@ -4,7 +4,7 @@ session_start();
  
 // Check if the user is logged in, otherwise redirect to login page
 if(!isset($_SESSION["loggedin_student"]) || $_SESSION["loggedin_student"] !== true){
-    header("location: login_student.php");
+    header("location: login_overall.php");
     exit;
 }
  
@@ -54,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if($stmt->execute()){
                 // Password updated successfully. Destroy the session, and redirect to login page
                 session_destroy();
-                header("location: login_student.php");
+                header("location: login_overall.php");
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
