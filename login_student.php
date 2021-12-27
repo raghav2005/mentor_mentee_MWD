@@ -126,6 +126,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				<input type="submit" class="btn btn-primary" value="Login">
 			</div>
 			<p>Don't have an account? <a href="register_overall.php">Sign up now</a>.</p>
+
+			<script>
+			$(document).ready(function () {
+				$('a').on('click', function(){
+				$('.nav li').removeClass('active');
+				$(this).addClass('active');
+				});
+			</script>
 		</form>
 	</div>
 </body>

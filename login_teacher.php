@@ -98,8 +98,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		body{ font: 14px sans-serif; }
 		.wrapper{ width: 360px; padding: 20px; }
 	</style>
+	<base target="_parent">
 </head>
-<base target="_parent">
 <body style="background: rgba(128, 0, 0, 0.3);">
 	<div class="wrapper">
 		<h2>Teacher Login</h2>
