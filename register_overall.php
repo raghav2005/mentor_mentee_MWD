@@ -47,16 +47,10 @@ require_once "config.php";
 						<a class="navbar-brand" href="#">Mentor-Mentee System</a>
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link" href="login_overall.php">Login</a>
-							</li>
-							<li class="nav-item">
 								<a class="nav-link active" href="#">Register</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link disabled" href="#">Show Table</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link disabled" href="#">Create Links</a>
+								<a class="nav-link" href="login_overall.php">Login</a>
 							</li>
 						</ul>
 						</div>
