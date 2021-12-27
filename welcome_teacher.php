@@ -7,8 +7,12 @@ if(!isset($_SESSION["loggedin_teacher"]) || $_SESSION["loggedin_teacher"] !== tr
 	header("location: login_overall.php");
 	exit;
 }
+
+// TODO: CREATE PAGE TO MANUALLY ADD AND REMOVE PAIRING LINKS, BUT TEACHER SHOULD BE THE SAME (NEW BUTTON TO GO TO PAGE, AND ACTUAL PAGE IMPLEMENTATION)
+
 ?>
  
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
