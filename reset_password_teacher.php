@@ -83,25 +83,60 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	<base target="_parent">
 </head>
 <body>
-	<div class="wrapper">
-		<h2>Reset Password</h2>
-		<p>Please fill out this form to reset your password.</p>
-		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
-			<div class="form-group">
-				<label>New Password</label>
-				<input type="password" name="new_password" class="form-control <?php echo (!empty($new_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $new_password; ?>">
-				<span class="invalid-feedback"><?php echo $new_password_err; ?></span>
-			</div>
-			<div class="form-group">
-				<label>Confirm Password</label>
-				<input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
-				<span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
-			</div>
-			<div class="form-group">
-				<input type="submit" class="btn btn-primary" value="Submit">
-				<a class="btn btn-link ml-2" href="welcome_teacher.php">Cancel</a>
-			</div>
-		</form>
+
+	<div class="row" style="height:100px;">
+		<div class="col-md-12">
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#">Mentor-Mentee System</a>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="welcome_teacher.php">Overview</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="show_table_teacher.php">Show Table</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="logout.php">Sign Out</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="reset_password_teacher.php">Reset Password</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="register_overall.php">Register</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#">Login</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-4"></div>
+		<div class="col-lg-4">
+			<h2>Reset Password</h2>
+			<p>Please fill out this form to reset your password.</p>
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
+				<div class="form-group">
+					<label>New Password</label>
+					<input type="password" name="new_password" class="form-control <?php echo (!empty($new_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $new_password; ?>">
+					<span class="invalid-feedback"><?php echo $new_password_err; ?></span>
+				</div>
+				<div class="form-group">
+					<label>Confirm Password</label>
+					<input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>">
+					<span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+				</div>
+				<div class="form-group">
+					<input type="submit" class="btn btn-primary" value="Submit">
+					<a class="btn btn-link ml-2" href="welcome_teacher.php">Cancel</a>
+				</div>
+			</form>
+		</div>
+		<div class="col-lg-4"></div>
 	</div>   
 </body>
 </html>

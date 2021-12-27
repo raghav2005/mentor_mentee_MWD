@@ -11,12 +11,6 @@ if(!isset($_SESSION["loggedin_student"]) || $_SESSION["loggedin_student"] !== tr
 // Include config file
 require_once "config.php";
 
-// SQL query to select data from database
-// $sql = "SELECT p.pairingID, CONCAT(s1.studentForename, ' ', s1.studentSurname) AS mentorFullName, s1.studentUsername AS mentorUsername, CONCAT(s2.studentForename, ' ', s2.studentSurname) AS menteeFullName, s2.studentUsername AS menteeUsername, CONCAT(t.teacherForename, ' ', t.teacherSurname) AS teacherFullName, t.teacherUsername, sub.subjectName FROM pairing p JOIN student s1 ON p.pairingMentorID = s1.studentID JOIN student s2 ON p.pairingMenteeID = s2.studentID JOIN teacher t ON t.teacherID = p.pairingTeacherID JOIN subject sub ON sub.subjectID = p.pairingSubjectID";
-
-// $result = $mysqli->query($sql);
-// $mysqli->close();
-
 $student_name = $_SESSION["username"];
 
 // Prepare an update statement

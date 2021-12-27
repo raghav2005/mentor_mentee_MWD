@@ -3,7 +3,7 @@
 session_start();
  
 // Check if the user is logged in, if not then redirect him to login page
-if(!isset($_SESSION["loggedin_student"]) || $_SESSION["loggedin_student"] !== true){
+if(!isset($_SESSION["loggedin_teacher"]) || $_SESSION["loggedin_teacher"] !== true){
 	header("location: login_overall.php");
 	exit;
 }
@@ -11,8 +11,11 @@ if(!isset($_SESSION["loggedin_student"]) || $_SESSION["loggedin_student"] !== tr
 // Include config file
 require_once "config.php";
 
-// SQL query to select data from database
-$sql = "SELECT p.pairingID, CONCAT(s1.studentForename, ' ', s1.studentSurname) AS mentorFullName, s1.studentUsername AS mentorUsername, CONCAT(s2.studentForename, ' ', s2.studentSurname) AS menteeFullName, s2.studentUsername AS menteeUsername, CONCAT(t.teacherForename, ' ', t.teacherSurname) AS teacherFullName, t.teacherUsername, sub.subjectName FROM pairing p JOIN student s1 ON p.pairingMentorID = s1.studentID JOIN student s2 ON p.pairingMenteeID = s2.studentID JOIN teacher t ON t.teacherID = p.pairingTeacherID JOIN subject sub ON sub.subjectID = p.pairingSubjectID";
+$teacher_name = $_SESSION["username"];
+
+// Prepare an update statement
+$sql = "SELECT p.pairingID, CONCAT(s1.studentForename, ' ', s1.studentSurname) AS mentorFullName, s1.studentUsername AS mentorUsername, CONCAT(s2.studentForename, ' ', s2.studentSurname) AS menteeFullName, s2.studentUsername AS menteeUsername, CONCAT(t.teacherForename, ' ', t.teacherSurname) AS teacherFullName, t.teacherUsername, sub.subjectName FROM pairing p JOIN student s1 ON p.pairingMentorID = s1.studentID JOIN student s2 ON p.pairingMenteeID = s2.studentID JOIN teacher t ON t.teacherID = p.pairingTeacherID JOIN subject sub ON sub.subjectID = p.pairingSubjectID WHERE t.teacherUsername = '$teacher_name'";
+
 $result = $mysqli->query($sql);
 $mysqli->close();
 
@@ -56,6 +59,37 @@ $mysqli->close();
 	<base target="_parent">
 </head>
 <body>
+	<div class="row" style="height:100px;">
+		<div class="col-md-12">
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#">Mentor-Mentee System</a>
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="welcome_teacher.php">Overview</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Show Table</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="logout.php">Sign Out</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="reset_password_teacher.php">Reset Password</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="register_overall.php">Register</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#">Login</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+
   	<section>
 		<table id="main_table">
 			<tr>
