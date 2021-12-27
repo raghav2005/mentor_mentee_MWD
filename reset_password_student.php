@@ -91,13 +91,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					<a class="navbar-brand" href="#">Mentor-Mentee System</a>
 					<ul class="navbar-nav">
 						<li class="nav-item">
+							<a class="nav-link" href="welcome_student.php">Overview</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="show_table_student.php">Show Table</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link" href="logout.php">Sign Out</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link active" href="reset_password_student.php">Reset Password</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="welcome_student.php">Overview</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link disabled" href="register_overall.php">Register</a>

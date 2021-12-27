@@ -31,13 +31,16 @@ if(!isset($_SESSION["loggedin_student"]) || $_SESSION["loggedin_student"] !== tr
 					<a class="navbar-brand" href="#">Mentor-Mentee System</a>
 					<ul class="navbar-nav">
 						<li class="nav-item">
+							<a class="nav-link active" href="#">Overview</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="show_table_student.php">Show Table</a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link" href="logout.php">Sign Out</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="reset_password_student.php">Reset Password</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link active" href="#">Overview</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link disabled" href="register_overall.php">Register</a>
@@ -67,7 +70,7 @@ if(!isset($_SESSION["loggedin_student"]) || $_SESSION["loggedin_student"] !== tr
 				<a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
 			</p>
 			<p>
-				<a href="show_table.php" class="btn btn_showtable">Show Table</a>
+				<a href="show_table_student.php" class="btn btn_showtable">Show Table</a>
 			</p>
 		</div>
 		<div class="col-lg-4"></div>
